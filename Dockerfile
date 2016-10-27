@@ -9,7 +9,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Install go.cd agent
-RUN curl -fSL "https://download.go.cd/binaries/$GOCD_VERSION/deb/go-agent-$GOCD_VERSION.deb" -o $GOCD_DISTR \
+RUN curl -fSL "https://download.go.cd/binaries/${GOCD_VERSION}/deb/go-agent_${GOCD_VERSION}_all.deb" -o $GOCD_DISTR \
     && dpkg -i $GOCD_DISTR \
     && rm $GOCD_DISTR
 
