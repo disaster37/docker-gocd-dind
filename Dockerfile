@@ -4,7 +4,7 @@ ENV GOCD_VERSION 16.11.0-4185
 ENV GOCD_DISTR go-agent.deb
 
 RUN apt-get update \
-    && apt-get -y install -y openjdk-8-jre-headless unzip make supervisor \
+    && apt-get -y install -y openjdk-7-jre-headless unzip make supervisor \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
